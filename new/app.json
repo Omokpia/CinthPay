@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "new",
-    "slug": "new",
+    "name": "CinthPay",
+    "slug": "CinthPay",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/react-logo.png",
-    "scheme": "new",
+    "icon": "./assets/images/logo.png",
+    "scheme": "CinthPay",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {

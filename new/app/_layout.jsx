@@ -12,12 +12,11 @@ export default function RootLayout() {
 
   const [loaded, error] = useFonts( {
 
-    regular: require('../assets/fonts/Poppins-Regular.ttf'),
-    medium: require('../assets/fonts/Poppins-Medium.ttf'),
-    semibold: require('../assets/fonts/Poppins-SemiBold.ttf'),
-    bold: require('../assets/fonts/Poppins-Bold.ttf'),
-    extrabold: require('../assets/fonts/Poppins-ExtraBold.ttf'),
-    black: require('../assets/fonts/Poppins-Black.ttf'),
+    regular: require('../assets/fonts/hinted-Morrison-Regular.otf'),
+    bold: require('../assets/fonts/hinted-Morrison-Bold.otf'),
+    semibold: require('../assets/fonts/hinted-Morrison-SemiBold.otf'),
+    medium: require('../assets/fonts/hinted-Morrison-Medium.otf'),
+    light: require('../assets/fonts/hinted-Morrison-Light.otf'),
   })
 
   useEffect(() =>{

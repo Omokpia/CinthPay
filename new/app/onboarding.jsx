@@ -2,17 +2,12 @@ import { Image, Text, View, StyleSheet, Dimensions } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context"
 import styles from "./styles";
 import { router } from "expo-router";
+import { useEffect } from "react";
+import { COLORS, SIZES } from "../theme/theme";
 
 
 
 const Onboarding = () =>{
-
-    setTimeout(() => {
-
-        router.push('./login')
-        
-    },5000)
-
 
     return(
 
@@ -22,7 +17,7 @@ const Onboarding = () =>{
 
                 <Text style={{fontFamily:"semibold",color:"#001E63", fontSize:36}}>
                     For{'\n'}Hassle-Free{'\n'}International{'\n'}
-                    <Text style={{color:'#FF0002'}}>Money Transfers</Text>
+                    <Text style={{color:COLORS.red}}>Money Transfers</Text>
                 </Text>
 
             </View>
