@@ -1,46 +1,47 @@
 import { Stack } from "expo-router";
 import Splash from "./splash";
 import { useEffect, useState } from "react";
-import {useFonts} from 'expo-font';
-
-
-
+import { useFonts } from "expo-font";
 
 export default function RootLayout() {
 
-  const [showSplash, setShowSplash] = useState(true)
+  const [showSplash , setShowSplash] = useState(true)
 
-  const [loaded, error] = useFonts( {
 
-    regular: require('../assets/fonts/hinted-Morrison-Regular.otf'),
-    bold: require('../assets/fonts/hinted-Morrison-Bold.otf'),
-    semibold: require('../assets/fonts/hinted-Morrison-SemiBold.otf'),
-    medium: require('../assets/fonts/hinted-Morrison-Medium.otf'),
-    light: require('../assets/fonts/hinted-Morrison-Light.otf'),
+  const [loaded , error] = useFonts({
+
+    regular : require('../assets/fonts/hinted-Morrison-Regular.otf'),
+    semibold : require('../assets/fonts/hinted-Morrison-SemiBold.otf'),
+    bold : require('../assets/fonts/hinted-Morrison-Bold.otf'),
+    medium : require('../assets/fonts/hinted-Morrison-Medium.otf'),
+    italic : require('../assets/fonts/hinted-Morrison-Italic.otf'),
+    light : require('../assets/fonts/hinted-Morrison-Light.otf'),
   })
 
-  useEffect(() =>{
 
-    setTimeout(() =>{
+  useEffect(()=>{
+
+    setTimeout(()=>{
 
       setShowSplash(false)
 
-    }, 5000)
+    }, 300)
 
   })
 
-  if(showSplash){
-    return<Splash/>
+
+  if(showSplash || !loaded){
+    return <Splash/>
   }
 
 
-  return(
+  return (
 
     <Stack screenOptions={{headerShown:false}}>
       <Stack.Screen name="index"/>
-      <Stack.Screen name="(auth)"/>
-
-
+      <Stack.Screen options={{headerShown:false}} name="(auth)"/>
+      <Stack.Screen name="(tabs)"/>
+      <Stack.Screen name="(home)"/>
     </Stack>
 
   )

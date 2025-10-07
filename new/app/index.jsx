@@ -1,27 +1,23 @@
-import Onboarding from './onboarding'
-import { useEffect } from 'react'
-import { router } from 'expo-router'
+import { Text } from "react-native"
+import { SafeAreaView } from "react-native-safe-area-context"
+import Onboarding from "./onboarding";
+import { useEffect } from "react";
+import { router } from "expo-router";
+  
 
+   const Index = ()=>{
+       
+   useEffect(()=>{
 
+    setTimeout(()=>{
 
-const Index = () => {
+        router.push('/sign-up')
 
-    useEffect (() =>{
-        setTimeout(() =>{
-            router.navigate('./login')
-        }, 3000)
-    })
+    }, 3000)
+   }, [])
 
     return <Onboarding/>
-}
-
-export default Index
+   }
 
 
-
-
-
-
-
-
-
+   export default Index;
